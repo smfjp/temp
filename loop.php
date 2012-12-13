@@ -1,11 +1,9 @@
 <div id="news" class="box">
 	<div class="section-header">
 	<h2><img src="<?php bloginfo('template_url'); ?>/images-1/ttl_news.gif" width="80" height="23" alt="NEWS"></h2>
-	<?php if(is_home()): ?>
-	<p><a href="<?php bloginfo('url'); ?>/news/">一覧を見る</a></p>
-	<?php endif ?>
 	</div><!-- section-header -->
 
+<?php query_posts('category_name=news'); ?>
 <?php if(have_posts()) : ?>
 <dl>
 	<?php while(have_posts()) : the_post(); ?>
@@ -25,6 +23,6 @@
 </dl>
 <?php else: ?>
 <p>投稿記事がありません。</p>
-<?php endif ?>
+<?php endif; wp_reset_query(); ?>
 
 </div><!-- news -->

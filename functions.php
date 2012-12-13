@@ -14,3 +14,6 @@ register_sidebar( array(
 add_action('init', 'first_temp_widget_init');
 
 register_nav_menus(array('nav' => 'ナビゲーション'));
+
+add_theme_support('post-thumbnails');
+set_post_thumbnail_size(110,110,true);

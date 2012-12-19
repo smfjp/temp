@@ -206,6 +206,19 @@ a:hover {
 #news dd.seminar {
 	background: url(images-1/icon_semi.gif) no-repeat 0 8px;
 }
+/* index */
+ul.item-lists li {
+	position: relative;
+	float: left;
+	width: 110;
+	margin-right: 50px;
+}
+ul.item-lists li span.product-label {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
 /* sidebar */
 #sidebar {
 	float: right;
